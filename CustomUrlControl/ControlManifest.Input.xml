@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="GuidoPreite" constructor="CustomUrlControl" version="1.0.0" display-name-key="Custom Url Control" description-key="Custom Url Control" control-type="standard">
+  
+      <type-group name="customgroup">
+        <type>Whole.None</type>        
+        <type>TwoOptions</type>
+        <type>Decimal</type>
+        <type>Enum</type>
+        <type>FP</type>
+        <type>Currency</type> 
+		<type>OptionSet</type>		
+        <type>SingleLine.Text</type>
+        <type>SingleLine.Email</type>
+        <type>SingleLine.URL</type>
+        <type>SingleLine.Ticker</type>		
+        <type>SingleLine.Phone</type>
+      </type-group>
+
+	<property name="value" display-name-key="Source Field" description-key="Source Field" of-type-group="customgroup" usage="bound" required="true" />		
+	<property name="placeholder" display-name-key="Placeholder" description-key="Placeholder" of-type="SingleLine.Text" usage="input" required="true" default-value="__VALUE__" />
+
+	<property name="value2" display-name-key="Source Field 2" description-key="Source Field 2" of-type-group="customgroup" usage="bound" required="false" />
+	<property name="placeholder2" display-name-key="Placeholder 2" description-key="Placeholder 2" of-type="SingleLine.Text" usage="input" required="false" default-value="__VALUE2__" />
+
+	<property name="value3" display-name-key="Source Field 3" description-key="Source Field 3" of-type-group="customgroup" usage="bound" required="false" />
+	<property name="placeholder3" display-name-key="Placeholder 3" description-key="Placeholder 3" of-type="SingleLine.Text" usage="input" required="false" default-value="__VALUE3__" />
+
+	<property name="urlLink" display-name-key="Url Link" description-key="Url Link" of-type="SingleLine.Text" usage="input" required="true" default-value="https://www.google.com/search?q=__VALUE__" />
+	<property name="urlText" display-name-key="Url Text" description-key="Url Text (if Empty the Url Link will be used)" of-type="SingleLine.Text" usage="input" required="false" />
+	<property name="urlCSS" display-name-key="Url CSS" description-key="Url CSS" of-type="SingleLine.Text" usage="input" required="false" default-value="font-family: 'Segoe UI'; font-size: 14px; font-weight: 600;" />
+	<property name="icon" display-name-key="Font Awesome Icon" description-key="Font Awesome Icon" of-type="SingleLine.Text" usage="input" required="false" />
+	<property name="iconStyle" display-name-key="Font Awesome Icon Style" description-key="Font Awesome Icon Style" of-type="SingleLine.Text" usage="input" required="false" />
+
+    <resources>
+      <code path="index.ts" order="1"/>
+    </resources>
+  </control>
+</manifest>
